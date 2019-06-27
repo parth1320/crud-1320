@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+  <a class="btn btn-default" href="/">Back to Todos</a>
+  <hr>
+  <h2 class="page-header">{{todo.name}}</h2>
+  <ul class="list-group">
+     <li class="list-group-item">Category:  {{todo.category}}</li>
+     <li class="list-group-item">Priority:  {{todo.priority}}</li>
+     <li class="list-group-item">DueDate: <strong> {{todo.dueDate|date('Y-m-d\\TH:i:sP')}}</strong></li>
+  </ul>
+  <p>
+     {{todo.discription}}
+  </p>
+{% endblock %}
